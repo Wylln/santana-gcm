@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0A1931" id="meta-theme-color" />
+  <meta name="description" content="Meu Edital GCM Santana 2026 — Checklist interativo completo do conteúdo programático para o Concurso Público nº 001/2026 da Prefeitura Municipal de Santana/AP." />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Meu Edital GCM Santana 2026" />
+
+  <title>Meu Edital GCM Santana 2026</title>
+
+  <link rel="manifest" href="./manifest.json" />
+  <link rel="icon" type="image/svg+xml" href="./icons/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png" />
+
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+  <!-- Banner de Instalação PWA (exibido automaticamente quando o navegador permite instalação) -->
+  <div id="pwa-install-banner" class="pwa-install-banner" hidden role="region" aria-label="Instalação do Aplicativo">
+    <div class="pwa-banner-content">
+      <img src="./icons/icon-192.png" alt="Ícone Meu Edital GCM Santana 2026" class="pwa-banner-icon" width="44" height="44" />
+      <div class="pwa-banner-text">
+        <strong>Instalar Meu Edital GCM Santana 2026</strong>
+        <span>Acesse offline direto da tela inicial do seu celular Android ou computador.</span>
+      </div>
+    </div>
+    <div class="pwa-banner-actions">
+      <button type="button" id="btn-pwa-install-banner" class="btn btn-gold btn-sm">Instalar Agora</button>
+      <button type="button" id="btn-pwa-dismiss-banner" class="btn btn-ghost btn-sm" aria-label="Fechar aviso de instalação">Agora não</button>
+    </div>
+  </div>
+
+  <!-- Cabeçalho Principal -->
+  <header class="app-header">
+    <div class="container header-inner">
+      <div class="brand-group">
+        <img src="./icons/icon-192.png" alt="Brasão Meu Edital GCM Santana 2026" class="brand-logo" width="52" height="52" />
+        <div class="brand-titles">
+          <div class="brand-badges">
+            <span class="badge-concurso">CONCURSO PÚBLICO Nº 001/2026 • SANTANA/AP</span>
+            <span id="connection-status" class="badge-status status-online" title="Seus dados estão salvos no dispositivo e disponíveis offline">
+              <span class="status-dot"></span>
+              <span id="connection-status-text">Pronto Offline</span>
+            </span>
+          </div>
+          <h1 class="app-title">Meu Edital GCM Santana 2026</h1>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <a href="./Meu-Edital-GCM-Santana-2026.apk" download="Meu-Edital-GCM-Santana-2026.apk" id="btn-download-apk" class="btn btn-secondary btn-sm" title="Baixar arquivo instalador .APK para Android">
+          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+          <span>Baixar .APK</span>
+        </a>
+
+        <button type="button" id="btn-install-header" class="btn btn-install" title="Instalar aplicativo no Android ou computador">
+          <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+          <span>Instalar App</span>
+        </button>
+
+        <button type="button" id="btn-theme-toggle" class="btn btn-icon" aria-label="Alternar tema claro ou escuro" title="Alternar tema claro/escuro">
+          <svg id="icon-sun" class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2" fill="none"/>
+            <path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    <!-- Painel Geral de Progresso dos Estudos -->
+    <section class="hero-dashboard" aria-labelledby="heading-progresso-geral">
+      <div class="hero-top">
+        <div class="hero-progress-overview">
+          <div class="progress-ring-wrapper" aria-hidden="true">
+            <svg class="progress-ring" width="108" height="108" viewBox="0 0 108 108">
+              <circle class="progress-ring-bg" cx="54" cy="54" r="46" stroke-width="10" fill="transparent" />
+              <circle id="overall-progress-circle" class="progress-ring-fill" cx="54" cy="54" r="46" stroke-width="10" fill="transparent" stroke-dasharray="289.03" stroke-dashoffset="289.03" />
+            </svg>
+            <div class="progress-ring-center">
+              <span id="overall-percentage-ring" class="ring-percent">0%</span>
+            </div>
+          </div>
+
+          <div class="hero-progress-info">
+            <h2 id="heading-progresso-geral" class="section-eyebrow">Progresso Geral do Edital</h2>
+            <div class="overall-percent-row">
+              <span id="overall-percentage-text" class="overall-percent-big">0%</span>
+              <span id="overall-status-pill" class="overall-status-pill">Iniciando estudos</span>
+            </div>
+            <p class="hero-subtitle">
+              Acompanhe cada subtópico estudado. Suas marcações são salvas automaticamente no dispositivo.
+            </p>
+          </div>
+        </div>
+
+        <!-- Cartões de Contagem: Total, Concluídos, Pendentes -->
+        <div class="stats-grid" role="group" aria-label="Resumo quantitativo de tópicos">
+          <div class="stat-card stat-total">
+            <span class="stat-label">Total de Tópicos</span>
+            <strong id="stat-total-count" class="stat-value">88</strong>
+            <span class="stat-meta">10 disciplinas oficiais</span>
+          </div>
+
+          <div class="stat-card stat-completed">
+            <span class="stat-label">Assuntos Estudados</span>
+            <strong id="stat-completed-count" class="stat-value">0</strong>
+            <span class="stat-meta">Tópicos concluídos</span>
+          </div>
+
+          <div class="stat-card stat-pending">
+            <span class="stat-label">Assuntos Pendentes</span>
+            <strong id="stat-pending-count" class="stat-value">88</strong>
+            <span class="stat-meta">Aguardando estudo</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Barra Linear de Progresso Geral -->
+      <div class="overall-bar-container">
+        <div class="overall-bar-labels">
+          <span>Evolução no conteúdo programático completo</span>
+          <span id="overall-fraction-label">0 de 88 tópicos concluídos (0%)</span>
+        </div>
+        <div class="progress-track progress-track-lg" role="progressbar" aria-labelledby="heading-progresso-geral" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="overall-progressbar">
+          <div id="overall-progress-bar" class="progress-fill" style="width: 0%"></div>
+        </div>
+      </div>
+
+      <!-- Acesso Rápido aos Tópicos Pendentes e Ações Principais -->
+      <div class="quick-actions-bar">
+        <div class="quick-actions-left">
+          <button type="button" id="btn-quick-pending" class="btn btn-pending-highlight">
+            <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" fill="none"/>
+              <path d="M12 7v5l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <span id="btn-quick-pending-text">Acesso Rápido: Ver Assuntos Não Estudados (88)</span>
+          </button>
+
+          <button type="button" id="btn-next-pending" class="btn btn-secondary" title="Ir diretamente para o próximo subtópico ainda não estudado">
+            <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 12h14m-6-6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </svg>
+            <span>Ir ao Próximo Pendente</span>
+          </button>
+        </div>
+
+        <div class="quick-actions-right">
+          <button type="button" id="btn-clear-progress" class="btn btn-danger-outline" title="Apagar todas as marcações com confirmação">
+            <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3 6h18M8 6V4a2 2 0 012-2h4a2 2 0 012 2v2m3 0v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6h14z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </svg>
+            <span>Limpar Progresso</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Painel das 10 Disciplinas do Edital com Indicadores Individuais -->
+    <section class="disciplines-overview-section" aria-labelledby="heading-disciplinas-overview">
+      <div class="section-header">
+        <div>
+          <h2 id="heading-disciplinas-overview" class="section-title">Disciplinas do Edital (1 a 10)</h2>
+          <p class="section-subtitle">Toque em uma disciplina para abrir e navegar diretamente para os seus subtópicos completos.</p>
+        </div>
+        <button type="button" id="btn-show-all-disciplines" class="btn btn-ghost btn-sm" hidden>
+          Mostrar todas as 10 disciplinas
+        </button>
+      </div>
+
+      <div id="disciplines-overview-grid" class="disciplines-overview-grid" role="list">
+        <!-- Preenchido dinamicamente pelo js/app.js -->
+      </div>
+    </section>
+
+    <!-- Barra de Pesquisa e Filtros -->
+    <section class="search-filter-section" aria-label="Pesquisa e filtros de assuntos">
+      <div class="search-box-wrapper">
+        <label for="search-input" class="sr-only">Pesquisar disciplinas, tópicos, números de itens e leis</label>
+        <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" fill="none"/>
+          <path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <input
+          type="search"
+          id="search-input"
+          class="search-input"
+          placeholder="Pesquisar por disciplina, assunto, número do item (ex: 5.5, 10.6) ou lei (ex: 13.022, 81/2026)..."
+          autocomplete="off"
+        />
+        <button type="button" id="btn-clear-search" class="btn-clear-search" hidden aria-label="Limpar pesquisa">
+          ✕
+        </button>
+      </div>
+
+      <div class="filter-controls-row">
+        <div class="filter-pills" role="tablist" aria-label="Filtrar tópicos por situação de estudo">
+          <button type="button" class="filter-pill active" data-filter="all" role="tab" aria-selected="true" id="tab-filter-all">
+            Todos os Tópicos <span id="badge-filter-all" class="pill-count">88</span>
+          </button>
+          <button type="button" class="filter-pill" data-filter="pending" role="tab" aria-selected="false" id="tab-filter-pending">
+            Pendentes (Não Estudados) <span id="badge-filter-pending" class="pill-count">88</span>
+          </button>
+          <button type="button" class="filter-pill" data-filter="completed" role="tab" aria-selected="false" id="tab-filter-completed">
+            Concluídos (Estudados) <span id="badge-filter-completed" class="pill-count">0</span>
+          </button>
+          <button type="button" class="filter-pill" data-filter="laws" role="tab" aria-selected="false" id="tab-filter-laws">
+            Com Links de Leis <span id="badge-filter-laws" class="pill-count">26</span>
+          </button>
+        </div>
+
+        <div class="accordion-bulk-actions">
+          <button type="button" id="btn-expand-all" class="btn btn-ghost btn-sm">Expandir Todas</button>
+          <button type="button" id="btn-collapse-all" class="btn btn-ghost btn-sm">Recolher Todas</button>
+        </div>
+      </div>
+
+      <!-- Indicador de filtro ativo -->
+      <div id="active-filter-banner" class="active-filter-banner" hidden>
+        <span id="active-filter-text">Filtro ativo</span>
+        <button type="button" id="btn-reset-filters" class="btn-link">Limpar filtros e exibir edital completo</button>
+      </div>
+    </section>
+
+    <!-- Conteúdo Programático Integral: 10 Disciplinas e 88 Subtópicos -->
+    <section class="edital-checklist-section" aria-labelledby="heading-conteudo-programatico">
+      <div class="section-header">
+        <div>
+          <h2 id="heading-conteudo-programatico" class="section-title">Conteúdo Programático Integral</h2>
+          <p class="section-subtitle">
+            Texto oficial completo, sem abreviações ou cortes. Marque a caixa de seleção ao concluir o estudo de cada subtópico.
+          </p>
+        </div>
+      </div>
+
+      <div id="edital-disciplines-container" class="edital-disciplines-container">
+        <!-- Renderizado pelo js/app.js com todo o conteúdo literal do edital -->
+      </div>
+
+      <!-- Estado Vazio de Busca/Filtro -->
+      <div id="empty-search-state" class="empty-state" hidden>
+        <div class="empty-state-icon" aria-hidden="true">🔎</div>
+        <h3 id="empty-state-title">Nenhum tópico encontrado</h3>
+        <p id="empty-state-desc">Não encontramos assuntos correspondentes ao filtro ou termo pesquisado.</p>
+        <button type="button" id="btn-empty-reset" class="btn btn-gold">Ver Todos os Tópicos do Edital</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="app-footer">
+    <div class="container footer-inner">
+      <p class="footer-brand">
+        <strong>Meu Edital GCM Santana 2026</strong> — Concurso Público nº 001/2026 da Prefeitura Municipal de Santana/AP
+      </p>
+      <p class="footer-note">
+        Aplicativo Web Progressivo (PWA) com salvamento automático local (IndexedDB) e funcionamento offline após o primeiro carregamento.
+        Os links externos de legislação apontam para os portais oficiais fornecidos no edital e requerem conexão à internet ao serem abertos.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Modal de Confirmação para Limpar Progresso -->
+  <div id="modal-clear-confirm" class="modal-backdrop" hidden role="dialog" aria-modal="true" aria-labelledby="modal-clear-title">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="modal-clear-title" class="modal-title">Limpar todo o progresso de estudos?</h3>
+      </div>
+      <div class="modal-body">
+        <p>
+          Tem certeza de que deseja desmarcar todos os tópicos estudados?
+          Você possui atualmente <strong id="modal-completed-count">0</strong> tópico(s) marcado(s) como concluído(s).
+        </p>
+        <p class="modal-warning">
+          Esta ação zerará as marcações salvas neste dispositivo.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="btn-cancel-clear" class="btn btn-secondary">Cancelar</button>
+        <button type="button" id="btn-confirm-clear" class="btn btn-danger">Sim, Limpar Tudo</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de Instruções de Instalação PWA (para navegadores sem prompt automático ou já instalado) -->
+  <div id="modal-install-help" class="modal-backdrop" hidden role="dialog" aria-modal="true" aria-labelledby="modal-install-title">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="modal-install-title" class="modal-title">Instalar Meu Edital GCM Santana 2026</h3>
+      </div>
+      <div class="modal-body">
+        <p>Você pode instalar este aplicativo no seu celular Android ou computador para estudar offline como um app nativo:</p>
+        <ul class="install-steps-list">
+          <li><strong>No Android (Chrome / Edge / Samsung Internet):</strong> toque no menu do navegador (<strong>⋮</strong> no canto superior ou inferior) e selecione <strong>"Instalar aplicativo"</strong> ou <strong>"Adicionar à tela inicial"</strong>.</li>
+          <li><strong>No Computador (Chrome / Edge):</strong> clique no ícone de instalação na barra de endereços (ao lado da URL) e confirme em <strong>"Instalar"</strong>.</li>
+          <li><strong>No iPhone / iPad (Safari):</strong> toque no botão <strong>Compartilhar</strong> e depois em <strong>"Adicionar à Tela de Início"</strong>.</li>
+        </ul>
+        <p class="modal-note">
+          <em>Nota técnica:</em> Os navegadores exigem contexto seguro (<strong>HTTPS</strong> em produção ou <strong>localhost</strong> em testes locais) para habilitar a instalação PWA e o Service Worker offline.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <a href="./Meu-Edital-GCM-Santana-2026.apk" download="Meu-Edital-GCM-Santana-2026.apk" class="btn btn-secondary">Baixar Arquivo .APK</a>
+        <button type="button" id="btn-close-install-help" class="btn btn-gold">Entendi</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast de Feedback Rápido -->
+  <div id="toast-notification" class="toast-notification" role="status" aria-live="polite" hidden></div>
+
+  <!-- Scripts do Aplicativo -->
+  <script src="./js/edital-data.js"></script>
+  <script src="./js/db.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>
